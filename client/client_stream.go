@@ -8,7 +8,7 @@ import (
 	pb "github.com/satyajitnayk/simple-grpc/proto"
 )
 
-func callSayHelloClientStream(client pb.GreetServiceClient, names *pb.NameList) {
+func callSayHelloClientStream(client pb.GreetServiceClient, names *pb.NamesList) {
 	log.Printf("Client streaming has started")
 	stream, err := client.SayHelloClientStreaming(context.Background())
 	if err != nil {
